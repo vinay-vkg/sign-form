@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins';
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #1d1d1d;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background-color: #501e17;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--1) * (360deg / 50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--1) * (3s / 50));
+}
+@keyframes animateBlink {
+    0%{
+        background-color: #ff4000;
+        box-shadow: 0px 0px 5px rgba(255, 64,0,);
+    }
+    25%{
+        background-color: #501e17;
+        box-shadow: 0px 0px 5px rgba(255, 64,0,);
+    }
+}
+.login-box{
+    position:absolute;
+    width: 400px;
+}
+.login-box form{
+    width: 100%;
+    padding: 0 50px;
+}
+h2{
+    font-size: 2rem;
+    color: #ff4000 ;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    margin: 25px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ff4000;
+    font-size: 1.4em;
+    color: #fff;
+    padding: 0 20px;
+    transition: 0.5s;
+    border-radius: 20px;
+    
+}
+.input-box input:focus,
+.input-box input:valid{
+    border-color: #ff4000;
+}
+
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box label,
+.input-box {
+    top: 1px;
+    font-size: 0.9rem;
+    background-color: #1d1d1d;
+    padding: 0 6px;
+    color: #ff4000;
+
+    
+}
+.forgot-password {
+    margin:-15px 0 10px;
+    text-align: center;
+}
+.forgot-password a{
+font-size: .85em;
+color: #fff;
+text-decoration: none;
+}
+.forgot-password a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    border-radius: 45px;
+    background-color: #ff4000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight:600;
+}
